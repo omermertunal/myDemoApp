@@ -1,4 +1,3 @@
-
 package com.mycompany.app;
 
 import static spark.Spark.*;
@@ -46,12 +45,10 @@ public class App
 
           String input2 = req.queryParams("input2").replaceAll("\\s","");
           int input2AsInt = Integer.parseInt(input2);
-		
-	String input3 = req.queryParams("input3").replaceAll("\\s","");
-          int input3AsInt3 = Integer.parseInt(input3);
+
           boolean result = App.search(inputList, input2AsInt);
 
-         Map map = new HashMap();
+          Map map = new HashMap();
           map.put("result", result);
           return new ModelAndView(map, "compute.mustache");
         }, new MustacheTemplateEngine());
