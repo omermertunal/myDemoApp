@@ -48,7 +48,7 @@ public class App
           int input2AsInt = Integer.parseInt(input2);
 		
 	String input3 = req.queryParams("input3").replaceAll("\\s","");
-          int input2AsInt2 = Integer.parseInt(input3);
+          int input3AsInt3 = Integer.parseInt(input3);
           boolean result = App.search(inputList, input2AsInt);
 
          Map map = new HashMap();
