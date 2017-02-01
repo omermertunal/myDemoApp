@@ -36,8 +36,8 @@ public class AppTest
         assertTrue( true );
     }
     public void testFound() {
-      ArrayList<String> array = new ArrayList<>(Arrays.asList("1","2", "3", "4"));
-      assertTrue(new App().search(array, "4","3"));
+      ArrayList<String> array = new ArrayList<>(Arrays.asList("1","2", "3", "4"));  // all methods changed, nothing same
+      assertTrue(new App().search(array, "4","2"));
     }
 
     public void testNotFound() {
@@ -61,6 +61,10 @@ public class AppTest
     public void testSpaceChar(){
       ArrayList<String> array = new ArrayList<>(Arrays.asList("1      ", "2", "3", "4"));
       assertTrue(new App().search(array," ","     "));
+    }
+    public void oneLengthArray(){
+      ArrayList<String> array = new ArrayList<>(Arrays.asList("1"));
+      assertTrue(new App().search(array,"1","2"));
     }
 
 }
