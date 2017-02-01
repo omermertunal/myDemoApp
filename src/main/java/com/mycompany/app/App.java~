@@ -12,13 +12,20 @@ import spark.template.mustache.MustacheTemplateEngine;
 
 public class App
 {
-    public static boolean search(ArrayList<Integer> array, int e) {
+    public static boolean search(ArrayList<String> array, String input1,String input2) {
       System.out.println("inside search");
       if (array == null) return false;
 
-      for (int elt : array) {
-        if (elt == e) return true;
-      }
+     
+        for(int i=0;i<inputList.size();i++){
+
+		if(inputList.get(i).toLowerCase().contains(input2.toLowerCase()))
+			return true;
+		if(inputList.get(i).toLowerCase().contains(input3.toLowerCase()))
+			return true;;
+			
+	  }
+      
       return false;
     }
 
@@ -48,16 +55,9 @@ public class App
 	
           boolean result=false;
 
-	  for(int i=0;i<inputList.size();i++){
+	 
 
-		if(inputList.get(i).toLowerCase().contains(input2.toLowerCase()))
-			result=true;
-		if(inputList.get(i).toLowerCase().contains(input3.toLowerCase()))
-			result=true;
-			
-	  }
-
-	  
+	  result=App.search(inputList,input2,input3);
 
 
 
