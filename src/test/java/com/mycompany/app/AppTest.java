@@ -60,7 +60,7 @@ public class AppTest
     
     public void testSpaceChar(){
       ArrayList<String> array = new ArrayList<>(Arrays.asList("1      ", "2", "3", "4"));
-      assertTrue(new App().search(array," ","     ");
+      assertTrue(new App().search(array," ","     "));
     }
 
 }
