@@ -42,7 +42,7 @@ public class AppTest
 
     public void testNotFound() {
       ArrayList<String> array = new ArrayList<>(Arrays.asList("1", "2", "3", "4"));
-      assertFalse(new App().search(array, "5","6"));
+      assertFalse(new App().search(array, "5","6")); // this methods changed, bec of all inputs string now.
     }
 
     public void testEmptyArray() {
@@ -66,5 +66,12 @@ public class AppTest
       ArrayList<String> array = new ArrayList<>(Arrays.asList("1"));
       assertTrue(new App().search(array,"1","2"));
     }
-
+    public void workForLargeInputs(){
+	ArrayList<String> array = new ArrayList<>(Arrays.asList("111111111111111111111","22222222222222222","3333333333333333333333"));
+        assertTrue(new App().search(array,"deneme12","333333333333333333"));
+    }
+    public void needToBeSlash(){
+      ArrayList<String> array = new ArrayList<>(Arrays.asList("H","e","l","l","o","w","o","r","l","d"));
+      assertFalse(new App().search(array,"Helloworld","deneme12"));
+    }
 }
