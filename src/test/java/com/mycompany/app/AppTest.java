@@ -57,4 +57,10 @@ public class AppTest
       ArrayList<String> array = new ArrayList<>(Arrays.asList("1", "2", "3", "4"));
       assertTrue(new App().search(array, "4","999"));
     }
+    
+    public void testSpaceChar(){
+      ArrayList<String> array = new ArrayList<>(Arrays.asList("1      ", "2", "3", "4"));
+      assertTrue(new App().search(array," ","     ");
+    }
+
 }
