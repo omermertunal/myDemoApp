@@ -54,7 +54,7 @@ public class AppTest
       assertFalse(new App().search(null, "1","4"));
     }
     public void halfFound() {
-      ArrayList<String> array = new ArrayList<>(Arrays.asList("1", "2", "3", "4"));
+      ArrayList<String> array = new ArrayList<>(Arrays.asList("1", "2", "3", "4")); // also I added other test methods...
       assertTrue(new App().search(array, "4","999"));
     }
     
