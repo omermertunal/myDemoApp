@@ -37,20 +37,24 @@ public class AppTest
     }
     public void testFound() {
       ArrayList<String> array = new ArrayList<>(Arrays.asList("1","2", "3", "4"));
-      assertTrue(new App().search(array, "4"));
+      assertTrue(new App().search(array, "4","3"));
     }
 
     public void testNotFound() {
       ArrayList<String> array = new ArrayList<>(Arrays.asList("1", "2", "3", "4"));
-      assertFalse(new App().search(array, "5"));
+      assertFalse(new App().search(array, "5","6"));
     }
 
     public void testEmptyArray() {
       ArrayList<String> array = new ArrayList<>();
-      assertFalse(new App().search(array, "1"));
+      assertFalse(new App().search(array, "1","6"));
     }
 
     public void testNull() {
-      assertFalse(new App().search(null, "1"));
+      assertFalse(new App().search(null, "1","4"));
     }
+    public void halfFound() {
+      ArrayList<String> array = new ArrayList<>(Arrays.asList("1", "2", "3", "4"));
+      assertTrue(new App().search(array, "4","999"));
+
 }

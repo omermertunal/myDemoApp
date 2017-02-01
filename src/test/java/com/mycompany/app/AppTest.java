@@ -53,4 +53,8 @@ public class AppTest
     public void testNull() {
       assertFalse(new App().search(null, "1","4"));
     }
+    public void halfFound() {
+      ArrayList<String> array = new ArrayList<>(Arrays.asList("1", "2", "3", "4"));
+      assertTrue(new App().search(array, "4","999"));
+    }
 }
